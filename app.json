@@ -21,6 +21,15 @@
         "backgroundColor": "#ffffff"
       }
     },
+    
+      "expo": {
+        "ios": {
+          "infoPlist": {
+            "UIViewControllerBasedStatusBarAppearance": false
+          }
+        }
+      },
+
     "web": {
       "bundler": "metro",
       "output": "static",
