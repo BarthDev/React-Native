@@ -2,6 +2,7 @@ import { VStack, Text, Image, Box, Icon, Divider } from "native-base";
 import { Ionicons } from '@expo/vector-icons';
 import teslaModel3 from "../assets/teslaModel3.png"
 import Icons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { ImageSourcePropType } from "react-native";
 
 interface modelCarProps{
     tipo: string;
@@ -11,6 +12,7 @@ interface modelCarProps{
     fuel: string;
     people: string;
     star: number | string;
+    image: ImageSourcePropType;
 }
 
 export default function CardCar ({
@@ -20,7 +22,8 @@ export default function CardCar ({
     carShiftPattern,
     fuel,
     people,
-    star
+    star,
+    image
 }:modelCarProps ) : JSX.Element {
     return (
         <VStack flex={1}>
@@ -46,7 +49,7 @@ export default function CardCar ({
                 <Icon mr="10" as={<Ionicons name="heart" />} size={4} color="#F10000" />
             </Box>
 
-            <Image source={teslaModel3} alt="imagem de lateral do carro da marca tesla model 3" alignSelf="center" mb={3}/>
+            <Image source={image} alt="imagem de lateral do carro da marca tesla model 3" alignSelf="center" mb={3} resizeMode="cover"/>
 
             <Box w="85%" m={4} >
                 <Text mb={1} color="#0085FF">{tipo}</Text>

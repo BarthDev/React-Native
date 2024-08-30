@@ -1,5 +1,5 @@
 import { Box, Button, Icon, Link, Text, VStack } from "native-base";
-import React from "react";
+import React, { useState } from "react";
 import BtnIconsCarDetails from "../components/BtnIconsCarDetails";
 import SliderCar from "../components/SliderCar";
 import { Ionicons } from "@expo/vector-icons";
@@ -11,6 +11,9 @@ interface Props {
   }
 
 export default function CarDetails({navigation} : Props ) {
+  
+  const [numCar, setNumCar] = useState(0);
+
   return (
     <VStack>
       <Box 

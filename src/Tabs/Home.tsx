@@ -71,6 +71,7 @@ export default function Home({
                                 fuel = {cars.fuel}
                                 people = {cars.people}
                                 star = {cars.star.toFixed(1)}
+                                image={cars.image}
                             />
                         
                        
